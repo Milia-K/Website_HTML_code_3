@@ -1,0 +1,136 @@
+body{
+    margin:0%;
+    padding:0%;
+}
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    display: grid;
+    grid-template: repeat(4, minmax(min-content, max-content)) 1fr minmax(min-content, max-content) / 1fr;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+.title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4vw;
+    text-align: right;
+    color: #FFFFFF;
+    justify-self: end;
+}
+.navigation{
+    font-family: 'DIN';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000000;
+}
+.menu{
+    text-decoration: none;
+}
+.nav_button{
+    background-color: rgb(2, 13, 54);
+    color: #FFFFFF;
+    align-self: center;
+}
+
+.build{
+    width: 100%; 
+    max-width: 100%;
+}
+
+.cabins{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 30px;
+    color: #000000;
+    padding: 1rem;
+}
+.cabins_img{
+    width: 100%; 
+    max-width: 100%;
+    padding: 1rem;
+}
+.footer{
+    background-color: #52503B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;;
+}
+.pages{
+    justify-self: center;
+    align-self: center;
+    justify-content: stretch;
+}
+.pay{
+    justify-self: center;
+    align-self: flex-start;
+    padding: 10px;
+    width: auto; 
+}
+.contact{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        display: grid;
+        grid-template: repeat(3, minmax(min-content, max-content)) 1fr minmax(min-content, max-content) / 1fr;
+    }
+    .title{
+        font-size: 0.5vw;
+    }
+    .header {
+
+        grid-row: 1;
+        grid-column: span 3;
+    }
+    .info{
+        display: grid;
+        grid-column: span 3;
+        padding: 1rem;
+    }
+    .cabins{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .cabins_img{
+        grid-row: 1;
+        grid-column: 2;
+        width: 100%; 
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .main {
+        display: flex;
+        grid-column: span 3;
+        grid-row: 2;
+    }
+
+    .footer {
+        grid-column: span 3;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
